@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>TS名錶酷愛網</title>
+    <style>body { opacity: 0; }</style>
+  </head>
+
+  <!-- 滾動的是 body, 監控的是 body, 對應的目標是導覽選單所在的位置, 所以針對 body 設定3個屬性 -->
+  <body class="bg-dark" data-spy="scroll" data-target=".navbar" data-offset="70">
+
+    <!-- nav 導覽列 ============================================================================ -->
+    <!-- navbar 表示這是一個 flex-box -->
+    <!-- navbar-expand-md 負責轉手機版的寬度, lg:991以下轉手機版, md:767以下轉手機版, sm:575以下轉手機版 -->
+    <!-- navbar-dark讓文字為白色, bg-dark負責背景顏色為暗底 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <!--  這是 LOGO 文字或圖片  -->
+        <a class="navbar-brand" href="#"><img src="images/logo.png" height="50" alt=""></a>
+        <!--  這是手機版時右上角呈現的選單按鈕, 注意:data-target表示按下這個按鈕時要控制展開收合的物件ID名稱  -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- 這是按鈕上呈現的icon圖案 -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- navbar-collapse表示這個框架區塊是可收展開的, 注意:id名稱必須跟button中的data-target一樣 -->
+        <!-- 左右二組選單要分散到二邊時, 方法(1)父層加justify-content-between的class名稱  -->
+        <!-- 左右二組選單要分散到二邊時, 方法(2)子層左側選單組加mr-auto的class名稱  -->
+        <!-- 左右二組選單要分散到二邊時, 方法(3)子層右側選單組加ml-auto的class名稱  -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- 這是一組靠左側的選單 -->
+          <ul class="navbar-nav">
+            <!-- active在視覺上設計底色不同,表示目前在這個位置,如果不需要則刪除  -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-heart"></i> Cool Love</a>
+              <div class="dropdown-menu">
+                <!--  aria-labelledby="navbarDropdownMenuLink"子選單的 div ********** -->
+                <a class="dropdown-item" href="https://www.audemarspiguet.com/en/" target="_blank">AudemarsPigue</a>
+                <a class="dropdown-item" href="http://www.blancpain.com/" target="_blank">Blancpain</a>
+                <a class="dropdown-item" href="https://www.longines.com/" target="_blank">Longines</a>
+                <a class="dropdown-item" href="https://www.omegawatches.com/" target="_blank">Omega</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="http://top.xbiao.com/" target="_blank"><i class="fa fa-sort-amount-desc"></i> Ranking</a>
+              <div class="dropdown-menu">
+                <!--  aria-labelledby="navbarDropdownMenuLink"子選單的 div ********** -->
+                <a class="dropdown-item" href="http://top.xbiao.com/001/" target="_blank">品牌排名</a>
+                <a class="dropdown-item" href="http://top.xbiao.com/002/" target="_blank">系列排名</a>
+                <a class="dropdown-item" href="https://top.xbiao.com/003/" target="_blank">子系列排名</a>
+                <a class="dropdown-item" href="https://top.xbiao.com/004/" target="_blank">型号排名</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://watch-critics.com" target="_blank"><i class="fa fa-comments"></i> Forum</a>
+            </li>
+          </ul>
+          <!-- 這是一組靠右側的選單 -->
+          <ul class="navbar-nav ml-auto">
+            <!-- active在視覺上設計底色不同,表示目前在這個位置,如果不需要則刪除  -->
+            <li class="nav-item">
+              <a class="nav-link" href="#sec1"><i class="fa fa-bookmark"></i> 新風情</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sec2"><i class="fa fa-bookmark"></i> 新消息</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sec3"><i class="fa fa-bookmark"></i> 新品展</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sec4"><i class="fa fa-bookmark"></i> 名牌錶</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+   
+    <!-- #sec1 區域 ============================================================================ -->
+    <section id="sec1">
+      <!-- 以下是一個 slider *********************************************** -->
+      <div id="slider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item">
+            <!-- 下方 div 是標題說明區 ********************************************** -->
+            <div class="carousel-caption d-none d-md-block">
+              <h3>The Quest of Watchmakers</h3>
+              <p>Constant Escapement L.M.</p>
+              <p>Constancy (in the sense of constant force) is a permanent quest for watchmakers. At Girard-Perregaux, this horological ‘holy grail’ has become a reality. Presented in 2008, the Constant Escapement revolutionised the very foundations of chronometry. Ten years after this major breakthrough that won the prestigious “Aiguille d’Or” award in the Grand Prix d’Horlogerie de Genève, Girard-Perregaux introduces a new Constant Escapement L.M. model featuring a design that is more technical and contemporary than ever.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <!-- 下方 div 是標題說明區 ********************************************** -->
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Grand Prix d'Horlogerie de Genève</h3>
+              <p>La Esmeralda Tourbillon</p>
+              <p>As the successor to the 27 Tourbillons with Three Bridges registered by Girard-Perregaux from 1865 to 1911, the Esmeralda Tourbillon tells the story of a passion for aesthetics and accuracy. The heiress to the pocket-watch La Esmeralda was granted the prize of the Tourbillon during the ceremony of the GPHG 2016.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item active">
+            <!-- 下方 div 是標題說明區 ********************************************** -->
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Grand Prix d'Horlogerie de Genève</h3>
+              <p>The Cat's Eye Tourbillon with Gold Bridge</p>
+              <p>The Cat’s Eye Tourbillon with Gold Bridge is a perfect fusion of expertise in both watchmaking and jewellery. « It is an honor to be rewarded with two prizes distinguishing our know-how in Haute Horlogerie in both categories Ladies High Mech and Tourbillon.» stated Antonio Calce, CEO of Girard-Perregaux.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item"></div>
+
+          <div class="carousel-item"></div>
+
+        </div>
+
+        <!-- 以下是 slider 左右方向的控制區 *********************************** -->
+        <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+        <!-- 以下是 slider 下方的指示器 *************************************** -->
+        <ol class="carousel-indicators">
+          <li data-target="#slider" data-slide-to="0"></li>
+          <li data-target="#slider" data-slide-to="1"></li>
+          <li data-target="#slider" data-slide-to="2" class="active"></li>
+          <li data-target="#slider" data-slide-to="3"></li>
+          <li data-target="#slider" data-slide-to="4"></li>
+        </ol>
+
+      </div>
+    </section>
+
+
+    <!-- #sec2 區域 ============================================================================ -->
+    <section id="sec2">
+
+      <!-- 右側:新消息圖文介紹 ================ -->
+      <div class="container">
+
+        <h1>新名錶新消息</h1>
+
+        <p class="alert alert-secondary alert-dismissible fade show">
+          <i class="fa fa-exclamation-triangle fa-2x"></i>&nbsp;&nbsp;
+          網站設計模擬練習用,相關影像資訊來自連結介紹的各網站,如有侵權請告知即刻處理. 
+          【 <a href="../T_rwd_web2/" target="_blank"><i class="fa fa-eye fa-2x fa-lg"></i><span> 版型變化 2</span></a> 】
+          <button type="button" class="close" data-dismiss="alert">×</button>
+        </p>
+
+        <div class="row">
+          <div class="col-12 col-md-5 col-lg-4">
+            <a id="playMov" target="movieFrame" href="https://www.youtube.com/embed/g0M2im3Pq0U?rel=0&showinfo=0&autoplay=1"><img src="images/news/news1.jpg" class="w-100" alt=""></a>
+            <iframe name="movieFrame" width="100%" height="0" src="" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-12 col-md-7 col-lg-8">
+            <div class="content">
+              <h2>帕瑪強尼二十週年慶</h2>
+              <p>1996年創立的
+                <a id="Parmigiani" href="https://www.parmigiani.com/en/watches/tonda" target="_blank" 
+                   data-toggle="tooltip" 
+                   data-placement="bottom" 
+                   data-trigger="hover focus" 
+                   data-html="true" 
+                   title="<h2>Parmigiani</h2><h4>瑞士奢侈品牌的手錶製造商</h4><h4>新聞訊息來自:watch-critics</h4>">帕瑪強尼</a>，今年慶祝成立20周年。在短短20年間，它已製作出33款自家機 芯，年初特別推出Tonda Chronor Anniversaire，在美感上、工藝上、機械上，都令人眼前一亮。這錶的人手上鍊機芯PF361。作為一枚計時機芯，它最大的特色在於採用難度高得多的整合式而非常見的模組式設計，計時和走時的結構是一體的，計時結構不能單獨拆除出來加裝在其他機芯上。同時具備追針計時與及大日曆功能的PF361，也是品牌首次採用36,000 高擺頻的機芯，可量度準確至1/10秒之餘，秒針的行進也更穩定。計時和追針功能都是由必須以人手進行打磨修飾、且難度極高的星柱輪管理。 一上一下的淚滴形計時按鈕，前者負責啟動及停止，後者負責歸零，追針則由與錶冠同軸的按鈕操控。計時系統採垂直耦合方式啟動，可避免計時啟動時秒針的抖動和遲延，因而更為精準。<a href="http://watch-critics.com" target="_blank">more...</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-7 col-lg-8">
+            <div class="content">
+              <h2>創造傳奇 -
+                <a href="https://www.parmigiani.com/en/watches/tonda" target="_blank"  
+                   data-toggle="tooltip" 
+                   data-placement="top" 
+                   data-trigger="hover focus" 
+                   data-html="true"  
+                   title="<h2>創造傳奇</h2><h4>世界最薄的微型擺陀超薄浮動陀飛輪機芯與世界最輕的鈦金屬陀飛輪框架兩項殊榮。</h4>">Tonda</a> 1950 Tourbillon</h2>
+              <p>一直以來，各大鐘錶品牌都免不了爭奪"最甚麼甚麼"的紀錄，低調而又絕少加入戰團的Parmigiani今次卻拿下了世界最薄的微型擺陀超薄浮動陀飛輪機芯與世界最輕的鈦金屬陀飛輪框架兩項殊榮。品牌耗時兩年研發出的珍珠陀自動浮動陀飛輪PF517機芯，僅厚3.4毫米，更用鈦金屬製成陀飛輪框架，只有0.255克的重量，世上最輕。鈦金屬加工時相當易燃，難以操控，而品牌卻成功克服挑戰創造紀錄。外觀上看來，陀飛輪裝置彷似漂浮在錶面上輕盈地起舞，細膩動人。因質量輕，令陀飛輪在旋轉過程中鍊鼓供應的恆力不易損耗，行走更順暢更穩定；自動陀上的雕花、正面的日內瓦圓形波紋及底板背景上的魚鱗紋裝飾都相當別緻。PF517機芯具29石，振頻21,600次，備有42小時動力貯存。<a href="http://watch-critics.com" target="_blank">more...</a></p>
+            </div>
+          </div>
+          <div class="col-12 col-md-5 col-lg-4">
+            <a href="http://watch-critics.com" target="_blank"><img class="w-100" src="images/news/news2.jpg" alt=""></a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-5 col-lg-4">
+            <a href="http://watch-critics.com" target="_blank"><img class="w-100" src="images/news/news3.jpg" alt=""></a>
+          </div>
+          <div class="col-12 col-md-7 col-lg-8">
+            <div class="content">
+              <h2>Parmigiani的低調複雜</h2>
+              <p>Parmigiani向來都是一個較為低調的品牌，雖然生產量不多，卻不乏資深錶迷的青睞備受推崇，大概是因為其設計新穎獨特外，品牌還能夠完全自家生產機芯以至腕錶的每一部份。近年，品牌推出的複雜錶令人嘖嘖稱奇。融合創新的設計和製錶師巧奪天工的技藝，一枚又一枚的腕錶應然而生。為與一眾錶迷分享精湛複雜的時計，品牌特地於東方表行皇后大道中100號店的地下中庭舉辦高級複雜錶展覽，帶來一系列的大師級作品，展期一個月，包括過往的經典創作至今年SIHH新品。</p>
+              <p>其中一款展品是今年的耀目新作。以19世紀初的Perrin Frères簽名懷錶為靈感的Toric Capitole，配備直徑45毫米的紅金錶殼，屬孤本創作，搭載品牌自家PF321機芯，手動上鍊，33石，備有45小時動力貯存。它是備有大教堂鐘聲裝置的三問錶，設有鵝頸微調，極具特色的蛇形鋼簧別出心裁地沿星形圍繞著機芯，而不是以常見的圓形。錶面用上大溪地珠貝，添了幾分異國風情，襯黑色愛馬仕鱷魚皮錶帶。<a href="http://watch-critics.com" target="_blank">more...</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-7 col-lg-8">
+            <div class="content">
+              <h2>鏤通之龍騰－Pasha De Cartier</h2>
+              <p>Watches & Wonders作為亞洲高級鐘錶展，品牌推出專為中國市場而設的新錶是自然不過的事。今年此錶展載譽歸來，卡地亞帶來的是充滿中國味道的龍錶－Pasha De Cartier。這一重要的中國文化標誌，以鏤通及鑲嵌工藝，栩栩如生地呈現在直徑42毫米、厚9.9毫米的Pasha錶殼之中。</p>
+              <p>品牌的鏤通大師，直接向機芯的基板和夾板動手，再由寶石鑲嵌大師化233顆圓鑽為鱗片、欖尖形切割沙弗萊石為眼，成就出一幅靈氣活現的龍圖騰。腕錶以藍鋼菱形雙針指示時分，搭載人手上鍊的9617 MC機芯，20石，每小時振頻28,800次，備有約3日動力貯存。這枚龍形裝飾鏤空腕錶一錶三款，皆以18K白金錶殼綴鑲圓鑽錶冠。錶圈鑲圓鑽的有兩款，一是以黑色鱷魚皮錶帶連18K白金摺疊扣佩戴，限量發售，另一則以鑲有圓鑽的鍍銠18K白金鏈帶佩戴，限量20枚；最後是限量僅10枚，錶圈和錶鏈飾以方鑽的款式。 <a href="http://watch-critics.com" target="_blank">more...</a></p>
+            </div>
+          </div>
+          <div class="col-12 col-md-5 col-lg-4">
+            <a href="http://watch-critics.com" target="_blank"><img class="w-100" src="images/news/news4.jpg" alt=""></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 左側:社群網圖示 ==================== -->
+      <ul class="nav nav-pills">
+        <li><a href="javascript:;"><i class="fa fa-facebook-square" style="color:#314a7e;"></i></a></li>
+        <li><a href="javascript:;"><i class="fa fa-google-plus-square" style="color:#dc4335;"></i></a></li>
+        <li><a href="javascript:;"><i class="fa fa-twitter-square" style="color:#339dc3;"></i></a></li>
+        <li><a href="javascript:;"><i class="fa fa-youtube-square" style="color:#e52d27;"></i></a></li>
+      </ul>
+
+    </section>
+
+    <!-- #sec3 區域 ============================================================================ -->
+    <section id="sec3">
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#tab3-1">
+            A<span class="tabL">udemars</span>P<span class="tabL">igue</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#tab3-2">
+            B<span class="tabL">lancpain</span><span class="tabS">N</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#tab3-3">Longines</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#tab3-4">Omega</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div id="tab3-1" class="tab-pane active">
+          <div class="tabBanner">
+            <img src="images/AudemarsPigue/banner_s.jpg" alt="">
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-sm-3"><img src="images/AudemarsPigue/watch1.png" alt=""></div>
+              <div class="col-6 col-sm-3"><img src="images/AudemarsPigue/watch2.png" alt=""></div>
+              <div class="col-6 col-sm-3"><img src="images/AudemarsPigue/watch3.png" alt=""></div>
+              <div class="col-6 col-sm-3"><img src="images/AudemarsPigue/watch4.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+        <div id="tab3-2" class="tab-pane fade">
+          <div class="tabBanner">
+            <img src="images/Blancpain/banner_s.jpg" alt="">
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-sm-3"><img src="images/Blancpain/watch1.png" alt=""></div>
+              <div class="col-6 col-sm-3"><img src="images/Blancpain/watch2.png" alt=""></div>
+              <div class="col-6 col-sm-3"><img src="images/Blancpain/watch3.png" alt=""></div>
+              <div class="col-6 col-sm-3"><img src="images/Blancpain/watch4.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+        <div id="tab3-3" class="tab-pane fade">
+          <div class="tabBanner">
+            <img src="images/Longines/banner_s.jpg" alt="">
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-sm-3"><img src="images/Longines/watch1.png" alt=""></div>
+              <div class="col-6 col-sm-3"><img src="images/Longines/watch2.png" alt=""></div>
+              <div class="col-6 col-sm-3"><img src="images/Longines/watch3.png" alt=""></div>
+              <div class="col-6 col-sm-3"><img src="images/Longines/watch4.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+        <div id="tab3-4" class="tab-pane fade">
+          <div class="tabBanner">
+            <img src="images/Omega/banner_s.jpg" alt="">
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-sm-3"><img src="images/Omega/watch1.png" alt=""></div>
+              <div class="col-6 col-sm-3"><img src="images/Omega/watch2.png" alt=""></div>
+              <div class="col-6 col-sm-3"><img src="images/Omega/watch3.png" alt=""></div>
+              <div class="col-6 col-sm-3"><img src="images/Omega/watch4.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+      
+    <!-- #sec4 區域 ============================================================================ -->
+    <section id="sec4">
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#tab4-1">頂級<span class="tabL">品牌</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#tab4-2">奢華<span class="tabL">品牌</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#tab4-3">豪華<span class="tabL">品牌</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#tab4-4">時尚<span class="tabL">品牌</span></a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+
+        <div id="tab4-1" class="tab-pane fade show active">
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="http://www.patek.com/en/home" target="_blank"><img src="images/logo/101PATEKPHILIPPE.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="https://www.alange-soehne.com/en/" target="_blank"><img src="images/logo/102a.lange&sohne.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="http://www.blancpain.com/" target="_blank"><img src="images/logo/103Blancpain.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="http://www.vacheron-constantin.com/en/home.html" target="_blank"><img src="images/logo/104VacheronConstantin.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="https://www.breguet.com/cn" target="_blank"><img src="images/logo/105Breguet.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/106JaegerLeCoultre.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/107AudemarsPiguet.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/108Cartier.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/109PIAGET.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/110.1075965459.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/111GlashutteOriginal.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/112ParmigianiFleurier.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/113Girard-Perregaux.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/114UlysseNardin.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/115.578512771.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/116.1601718768.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/117.1928709395.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/118.1579660644.jpg" alt=""></a></div>
+            </div>
+          </div>
+        </div>
+        <div id="tab4-2" class="tab-pane fade">
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/201Rolex.jpg" alt=""></a></div>   
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/202Omega.jpg" alt=""></a></div>   
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/203IWC.jpg" alt=""></a></div>   
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/204BVLGARI.jpg" alt=""></a></div>   
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/205ZENITH.jpg" alt=""></a></div>   
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/206HUBLOT.jpg" alt=""></a></div>   
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/207Panerai.jpg" alt=""></a></div>   
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/208.434143739.jpg" alt=""></a></div>   
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/209CarlF.Bucherer.jpg" alt=""></a></div>   
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/210BREITLING.jpg" alt=""></a></div>   
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/211Chopard.jpg" alt=""></a></div>   
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/212Juvenia.jpg" alt=""></a></div>   
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/213Corum.jpg" alt=""></a></div>   
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/214.683013163.jpg" alt=""></a></div>  
+            </div>
+          </div>
+        </div>
+        <div id="tab4-3" class="tab-pane fade">
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/301longines.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/302MONTBLANC.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/303TAGHeuer.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/304BaumeMercier.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/305Tudor.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/306Emile-Chouriet.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/307BALL.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/308ErnestBorel.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/309NOMOS.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/310RADO.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/311ORIS.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/312MAURICELACROIX.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/313RaymondWeil.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/314.743252727.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/315NIVREL.jpg" alt=""></a></div>      
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/316FrederiqueConstant.jpg" alt=""></a></div>
+            </div>
+          </div>
+        </div>
+        <div id="tab4-4" class="tab-pane fade">
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/401SWATCH.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/402Hermes.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/403LV.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/404Dior.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/405CHANEL.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/406Gucci.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/407.1244130634.jpg" alt=""></a></div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="javascript:;" target="_blank"><img src="images/logo/408Tiffany.jpg" alt=""></a></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="bg-dark">
+        Copyright © 2015 TopStyle Watch Web | 建議使用 Chrome 瀏覽器 | Maintain by TS <br>
+        (網站設計模擬練習用,相關影像資訊來自連結介紹的各網站,如有侵權請告知即刻處理)
+      </footer>
+
+    </section>
+
+
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <p>網站設計模擬練習用<br>
+              相關影像資訊來自連結介紹的各網站<br>             
+              如有侵權請告知即刻處理</p>
+            <p>建議使用 Chrome 瀏覽器</p>
+            <p>Copyright © 2015 TopStyle Watch Web<br>          
+              Maintain by Watch</p>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 外部資源：google web font & fa font ============================= -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!-- 載入 jQuery 及 bootstrap 需要的相關檔案 =========================== -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/popper.min.js"></script>
+
+    <!-- bootstrap及相關程式連結載入 ======================================= -->
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+
+    <!-- 自行設計的 CSS & JS ============================================== -->
+    <script>
+      var num = Math.floor(Math.random()*100);
+      document.write('<link rel="stylesheet" href="layout.css?v='+num+'">');
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>

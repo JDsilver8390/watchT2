@@ -1,0 +1,209 @@
+/*
+font-family: 'Noto Sans TC', sans-serif;  中文黑體
+font-family: 'Righteous', cursive;    英文方圓體
+font-family: 'Righteous', 'Noto Sans TC', sans-serif;  英文方圓體=>中文黑體=>電腦系統預設無襯線字體
+*/
+
+html,body { height: 100%; font-size: 15px; color: #eee; }
+body { letter-spacing: 1px; opacity: 1;
+  font-family: Arial,STHeiti,'Microsoft JhengHei','微軟正黑體',sans-serif; }
+
+h1, h2, .nav-link, .modal-content { font-family: 'Righteous', 'Noto Sans TC', sans-serif; }
+
+body>section { min-height: 100%; position: relative; padding: 100px 0 80px;
+  background-image: url(images/shadow1.png), url(images/secbg.png); 
+  background-repeat: no-repeat, repeat;
+  background-position: center top, center;
+  background-size: contain, auto;
+}
+
+#sec1 { padding: 0; }
+
+body>section h1 { 
+  color: #fff; font-size: 2rem; font-weight: normal; text-align: center;
+  background: url(images/h1bg.png) no-repeat center; 
+  margin-bottom: 2rem; padding: 1.5rem 0; }
+
+
+/* .navbar 導覽列區域 ===================================================================  */
+.navbar { padding: 0 1rem; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7); }
+.navbar-brand { padding: 10px 0;  }
+
+.dropdown-menu { margin-top: -10px; }
+.navbar .dropdown:hover .dropdown-menu  { display: block; }
+.dropdown-item:focus, .dropdown-item:hover { background-color: #dedede; }
+
+/*上方導覽列<a>按鈕區*/
+.nav-link { padding: 27px 1rem; line-height: 1em; font-size: 16px; }
+
+.navbar-dark .navbar-nav .nav-link { color: rgba(255,255,255,.75); }
+.navbar-dark .navbar-nav .nav-link:focus, 
+.navbar-dark .navbar-nav .nav-link:hover {color: rgba(255,255,255,1); }
+
+.navbar-dark .navbar-nav .active>.nav-link, 
+.navbar-dark .navbar-nav .nav-link.active, 
+.navbar-dark .navbar-nav .nav-link.show, 
+.navbar-dark .navbar-nav .show>.nav-link {
+  color: #fff; background-color: black; 
+}
+
+@media (max-width: 991px){ 
+  .navbar-collapse { padding: 0; }
+  a.nav-link { padding: 10px;} 
+  .ml-auto { text-align: right; }
+  .dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
+  .dropdown-item:focus, 
+  .dropdown-item:hover { 
+    color: #000; text-decoration: none; background-color: #d9d9d9; }
+}
+
+
+/* #sec1 ============================================================================== */
+#sec1, #slider, .carousel-inner { height: 100%; }
+#slider .carousel-item {
+  width: 100%; height: 100%; background-size: cover; background-position: center;
+}
+#slider .carousel-item:nth-of-type(1) { background-image: url(images/banner/banner1.jpg); }
+#slider .carousel-item:nth-of-type(2) { background-image: url(images/banner/banner2.jpg); }
+#slider .carousel-item:nth-of-type(3) { background-image: url(images/banner/banner3.jpg); }
+#slider .carousel-item:nth-of-type(4) { background-image: url(images/banner/banner4.jpg); }
+#slider .carousel-item:nth-of-type(5) { background-image: url(images/banner/banner5.jpg); }
+
+.carousel-caption { left: 15%; right: 55%; top: 20%; }
+
+.carousel-indicators li:hover { cursor: pointer; background-color: red; }
+
+@media (max-width: 770px){
+  #slider .carousel-item:nth-of-type(3) { background-position: right center; }
+  #slider .carousel-item:nth-of-type(5) { background-image: url(images/banner/banner5.jpg); }
+}
+
+
+/* #sec2 ============================================================================== */
+#sec2 h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+#sec2 p { text-align: justify; }
+
+#sec2 .alert { margin: 2rem 0; }
+#sec2 .alert .fa { vertical-align: middle; }
+#sec2 .alert .fa-eye { transform: translateY(-3px); }
+.alert-dismissible .close { top: 50%; transform: translateY(-50%); }
+
+#sec2 .container .row { padding: 2.5rem 0; }
+#sec2 .container .row img { border-radius: 8px; }
+
+@media( min-width:768px ){
+  #sec2 .container .row .col-lg-4 { position: relative; z-index: 1; }
+  #sec2 .container .row .col-lg-8 { position: relative; padding: 50px 20px 0; }
+
+  #sec2 .container .row .col-lg-8 .content { position: relative; z-index: 1; }
+  #sec2 .container .row .col-lg-8::before { content: ''; z-index: 0;
+    background-color: rgba(255, 255, 255, 0.1); border-radius: 8px;
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+    box-sizing: content-box; transform-origin: left top; 
+  }
+  #sec2 .container .row:nth-of-type(odd) .col-lg-8::before {
+    padding-right: 150px; transform: translate(-150px,20px);
+  }
+  #sec2 .container .row:nth-of-type(even) .col-lg-8::before {
+    padding-right: 150px; transform: translate(0px,20px);
+  }
+}
+
+@media( max-width:767px ){
+  #sec2 .alert { margin: 2rem 0 2rem 2.5rem; }
+  #sec2 .container .row:nth-of-type(odd) { flex-direction: column-reverse; }
+  #sec2 .container .row { padding: 2.5rem 1rem 2.5rem 2.5rem; }
+}
+
+.tooltip-inner { background-color: #ffff74; }
+.tooltip-inner h2 { background-color: blue; font-size: 20px; }
+.tooltip-inner h4 { color: blue; font-size: 14px; }
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before, 
+.bs-tooltip-bottom .arrow::before { border-bottom-color: #ffff74; }
+.bs-tooltip-auto[x-placement^=top] .arrow::before, 
+.bs-tooltip-top .arrow::before { border-top-color: #ffff74; }
+
+.nav-pills { width: 60px; position: absolute; left: 0; top: 200px; z-index: 9001; }
+.nav-pills li { display: block; }
+.nav-pills li a { padding-bottom: 5px; display: block; }
+.nav-pills li a:hover { background-color: transparent; }
+.nav-pills i { font-size: 40px; }
+@media (min-width: 768px){ .nav-pills i { font-size: 50px; } }
+.nav-pills.affix { position: fixed; top: 200px; width: 60px; }
+
+
+/* #sec3,#sec4 的 tabs ================================================================ */
+.nav-tabs { justify-content: center; }
+
+.nav-tabs a.nav-link { padding: 0.8em 1em; color: darkgray; }
+.nav-tabs .nav-link:focus, 
+.nav-tabs .nav-link:hover { 
+  border-color: transparent; 
+  background-color: rgba(106, 106, 106, 0.4);
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #fff; background-color: #000;
+  border-color: #dee2e6 #dee2e6 transparent;
+}
+
+.nav-tabs a.nav-link span.tabS { display: none; }
+
+@media(max-width:600px){
+  .nav-tabs a.nav-link span.tabL { display: none; }
+  .nav-tabs a.nav-link span.tabS { display: inline; }
+}
+
+
+/* #sec3 ============================================================================== */
+#sec3 .tabBanner>img, #sec3 .container .col-6 img { width: 100%; height: auto; }
+#sec3 .tabBanner>img { margin-bottom: 20px; }
+
+@media(max-width:575px){
+  #sec3 .container .col-6 img { max-width: 180px; }
+}
+
+
+/* #sec4 ============================================================================== */
+#sec4 { /*position: relative; 移到上方統一處理*/ }
+#sec4 .tab-content { background-color: black; padding: 30px 0; }
+#sec4 .container, #sec4 .container .col-6 { text-align: center; padding: 20px; }
+#sec4 .container .col-6 img { max-width: 100%; 
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1); }
+
+.scale_s { transform: scale(0.7); opacity: 0.2; }
+.scale_b { transform: scale(1.3); box-shadow: 0 0 10px 3px red; }
+
+footer { position: absolute; width: 100%; left: 0; bottom: 0; 
+  font-size: 12px; text-align: center; padding: 1rem; 
+  box-shadow: 0 -5px 5px rgba(0,0,0,0.5);
+}
+
+@media(max-width:575px){
+  #sec4 .tab-content { padding: 20px 20px 80px 20px; }
+}
+
+/* Modal 區塊 ========================================================================== */
+.modal { background-color: rgba(0,0,0,0.6); }
+.modal-content { color: #999;
+  background-image: url(images/modal_bg_top.png), url(images/modal_bg_bottom.png); 
+  background-size: 30% auto;
+  background-position: center 30px, right bottom; 
+  background-repeat: no-repeat; }
+
+.modal-header .close, .modal-footer .btn { cursor: pointer; }
+.modal-header, .modal-footer { border: none; }
+
+.modal-body { padding-top: 30px; }
+.modal-body p { line-height: 1.8em; padding-bottom: 1.5em; }
+.modal-footer { justify-content: flex-start; }
+
+.modal-dialog { margin-top: 60px; }
+@media (min-width: 576px){ .modal-dialog { margin-top: 100px; } }
+@media (min-width:770px) { .modal-content { min-height: 400px; } }
+
+
+/* ==================================================================================== */
+.bg-dark { background-color: #333!important; }
+.fixed-top { z-index: 9008; }
+.modal { z-index: 9009; }
